@@ -9,5 +9,5 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    console.log("💜 Portafolio actualizado y en modo pro!");
+    console.log("💜 Portafolio actualizado ");
 });

@@ -3,6 +3,38 @@ body {
   font-family: "Times New Roman", serif, "Arial", sans-serif; /* Se agrega Times New Roman como primera opción */
 }
 
+/* Animación de escritura */
+.typing {
+  font-size: 36px;
+  font-weight: bold;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    #d8b8f4,
+    #ba72fa,
+    #7d00eb,
+    #220137
+  ); /* Degradado de lila a morado */
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  overflow: hidden; /* Ocultar el texto que no se ha escrito aún */
+  white-space: nowrap; /* Evitar que el texto se rompa */
+  width: 0;
+  animation: typing 4s steps(20) forwards; /* Aquí definimos la animación */
+}
+
+/* Definición de la animación */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%; /* Hacer que todo el texto se escriba */
+  }
+}
+
+
 .text-purple {
   color: #6f42c1; /* Color púrpura Bootstrap */
 }
@@ -205,6 +237,14 @@ p {
   transition: all 0.3s;
 }
 
+#proyectos {
+  margin-bottom: 60px; /* Espacio entre Proyectos y Contacto */
+}
+
+#contacto {
+  margin-top: 60px; /* También puedes agregar aquí para mayor separación */
+}
+
 .contact-link:hover {
   opacity: 0.8;
 }
@@ -212,29 +252,20 @@ p {
 .email {
   background: #ffdd57;
   color: #000;
-  box-shadow: 0 4px 8px rgb(234, 207, 33); 
+  box-shadow: 0 4px 8px rgb(251, 208, 68);
 }
 
 .linkedin {
   background: #49befd;
   color: #fff;
-  box-shadow: 0 4px 8px #01a5fd(80, 89, 224, 0.5); 
+  box-shadow: 0 4px 8px #0077b5(80, 89, 224, 0.5);
 }
 
 .github {
   background: #8d9092;
   color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
-
-#proyectos {
-    margin-bottom: 60px; /* Espacio entre Proyectos y Contacto */
-  }
-  
-  #contacto {
-    margin-top: 60px; /* También puedes agregar aquí para mayor separación */
-  }
-  
 
 @media (min-width: 768px) {
   .contacto-redes {
