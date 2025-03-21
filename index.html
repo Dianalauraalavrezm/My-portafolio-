@@ -1,92 +1,225 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Diana </title>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio de Diana</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
-</head>
-<body>
-
-    <!-- Header / Landing Page -->
-    <header>
-        <div class="avatar">
-            <img src="https://png.pngtree.com/png-vector/20241111/ourlarge/pngtree-cat-with-laptop-vector-png-image_14336449.png" alt="Avatar de Dian">
+  </head>
+  <body class="bg-light text-dark">
+    <!-- Barra de navegación con Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Portafolio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#proyectos">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cv">CV</a>
+            </li>
+          </ul>
         </div>
-        <h1>✨ Hola, soy Diana Alvarez ✨</h1>
-        <p>Full-Stack Developer Jr | JavaScript | Python | Java</p>
-    </header>
-
-    <!-- Barra de navegación -->
-    <nav>
-        <ul>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+      </div>
     </nav>
 
-    <!-- Sección Sobre mí -->
-    <section id="sobre-mi">
-        <h2>💜 Sobre mí</h2>
-        <p>Full-Stack Developer Jr con habilidades en HTML, JavaScript y desarrollo web. Me destaco por mi capacidad de análisis, resolución de problemas y atención al detalle, asegurando código funcional y eficiente. Trabajo en equipo, comunicación clara y aprendizaje continuo son clave en mi enfoque.</p>
-    </section>
+    <!-- Header / Landing Page -->
+    <header class="text-center py-1" style="background-color: #d3acf4">
+        <!-- Fondo lila -->
+        <div class="avatar-container">
+          <img
+            src="/Images/WhatsApp_Image_2025-03-20_at_9.19.47_PM-removebg-preview.png"
+            alt="Avatar de Diana"
+            class="avatar img-fluid"
+          />
+        </div>
+        <h1>Hola, soy Diana Alvarez</h1>
+        <p>Full-Stack Developer Jr | JavaScript | Python | Java</p>
+      </header>
+    <!-- Sección Sobre mí y CV -->
+    <section id="sobre-mi" class="container py-7">
+        <div class="row align-items-center">
+          <!-- Sobre mí -->
+          <div class="col-md-6">
+            <h2 class="text-center text-purple">Sobre mí</h2>
+            <p class="text-center fs-5">
+              Soy Full-Stack Developer Jr con experiencia en HTML, JavaScript y
+              desarrollo web. Me destaco por mi capacidad para analizar problemas y
+              encontrar soluciones eficientes, siempre asegurando que el código sea
+              funcional y optimizado. Mi enfoque se basa en el trabajo en equipo, la
+              comunicación clara y el aprendizaje continuo, lo cual me permite
+              adaptarme a nuevas tecnologías y mejorar en cada proyecto que realizo.
+            </p>
+          </div>
+          <!-- CV -->
+<div class="col-md-6 text-center">
+    <h2 class="text-purple">Mi CV</h2>
+    <div class="card mx-auto" style="width: 18rem;">
+        <img src="/Images/gatomicho.jpg" class="card-img-top" alt="CV Preview" style="width: 100%; height: 150px; object-fit: cover;" />
+        <div class="card-body text-center">
+            <h5 class="card-title">Descarga mi CV</h5>
+            <p class="card-text">Puedes ver y descargar mi currículum en formato PDF.</p>
+            <a href="/Images/DIANA LAURA ALVAREZ MENDIETA.pdf" class="btn btn-primary" target="_blank">Ver CV</a>
+        </div>
+    </div>
+</div>
+
+      <!-- Línea divisoria -->
+      <hr style="border: 2px solid rgb(112, 51, 255); width: 100%; margin: 40px auto;">
+
+    <!-- Sección Skills -->
+    <section id="skills" class="container py-5">
+        <div class="skills-container">
+          <!-- Skill 1: HTML -->
+          <div class="skill">
+            <img src="/Images/logo_htm-removebg-preview.png" alt="HTML" />
+          </div>
+      
+          <!-- Skill 2: CSS -->
+          <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS" />
+          </div>
+      
+          <!-- Skill 3: JavaScript -->
+          <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" />
+          </div>
+      
+          <!-- Skill 4: Java -->
+          <div class="skill">
+            <img src="https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png" alt="Java" />
+          </div>
+      
+          <!-- Skill 5: Git -->
+          <div class="skill">
+            <img src="https://logowik.com/content/uploads/images/git6963.jpg" alt="Git" />
+          </div>
+        </div>
+      </section>
+    <!-- Línea divisoria -->
+    <hr style="border: 2px solid rgb(112, 51, 255); width: 100%; margin: 40px auto;">
 
     <!-- Sección Proyectos -->
     <section id="proyectos">
-        <h2>🚀 Mis Proyectos</h2>
+        <h2 class="text-center text-purple">Mis Proyectos</h2>
         <div class="proyectos-container">
-            <!-- Proyecto 1 -->
-            <div class="proyecto">
-                <img src="/Images/Captura de Pantalla 2025-03-18 a la(s) 17.04.56.png" alt="Proyecto 1">
-                <h3>Perseflora</h3>
-                <p>Perseflora es un e-commerce dedicado a las suculentas, donde los amantes de las plantas pueden encontrar información útil sobre el cuidado, cultivo y variedades de suculentas . El sitio está desarrollado utilizando HTML, CSS y JavaScript, lo que le da un diseño atractivo y funcional, además de ser completamente responsive.</p>
-                <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-                <div class="proyecto-links">
-                    <a href="#" target="_blank">💻 https://github.com/ana-conejo1/Florecitas/tree/Develop</a>
-                </div>
+          <!-- Proyecto 1 -->
+          <div class="proyecto">
+            <img
+              src="/Images/Captura de Pantalla 2025-03-18 a la(s) 17.04.56.png"
+              alt="Proyecto 1"
+            />
+            <h3>Perseflora</h3>
+            <p>
+              Perseflora es un e-commerce dedicado a las suculentas, donde los
+              amantes de las plantas pueden encontrar información útil sobre el
+              cuidado, cultivo y variedades de suculentas. El sitio está desarrollado
+              utilizando HTML, CSS y JavaScript, lo que le da un diseño atractivo y
+              funcional, además de ser completamente responsive.
+            </p>
+            <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
+            <div class="proyecto-links">
+              <a href="https://github.com/ana-conejo1/Florecitas/tree/Develop" target="_blank">
+                💻 Ver en GitHub
+              </a>
             </div>
-            <!-- Proyecto 2 -->
-            <div class="proyecto">
-                <img src="/Images/WhatsApp Image 2025-03-18 at 4.53.28 PM (2).jpeg" alt="Proyecto 2">
-                <h3>Femmeforce</h3>
-                <p>Femmeforce es una tienda en línea que ofrece productos deportivos diseñados para mujeres. Vende ropa, accesorios y equipo especializado, enfocados en comodidad y calidad, para apoyar a las mujeres en sus actividades deportivas.</p>
-                <p><strong>Tecnologías:</strong>HTML, CSS, JavaScript</p>
-                <div class="proyecto-links">
-                    <a href="#" target="_blank">💻 https://github.com/jessips4/Equipo-3</a>
-                </div>
+          </div>
+      
+          <!-- Proyecto 2 -->
+          <div class="proyecto">
+            <img
+              src="/Images/WhatsApp Image 2025-03-18 at 4.53.28 PM (2).jpeg"
+              alt="Proyecto 2"
+            />
+            <h3>Femmeforce</h3>
+            <p>
+              Femmeforce es una tienda en línea que ofrece productos deportivos
+              diseñados para mujeres. Vende ropa, accesorios y equipo
+              especializado, enfocados en comodidad y calidad, para apoyar a las
+              mujeres en sus actividades deportivas.
+            </p>
+            <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
+            <div class="proyecto-links">
+              <a href="https://github.com/jessips4/Equipo-3" target="_blank">
+                💻 Ver en GitHub
+              </a>
             </div>
-            <!-- Proyecto 3 -->
-            <div class="proyecto">
-                <img src="https://via.placeholder.com/300" alt="Proyecto 3">
-                <h3>Proyecto 3</h3>
-                <p>Descripción breve del proyecto.</p>
-                <p><strong>Tecnologías:</strong> Vue.js, Firebase</p>
-                <div class="proyecto-links">
-                    <a href="#" target="_blank">💻 Código en GitHub</a>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
     <!-- Sección Contacto -->
-    <section id="contacto">
-        <h2>📩 Contacto</h2>
-        <p>Puedes contactarme en:</p>
-        <p>📧 <a href="diana.alvarezdev@gmail.com">diana.alvarezdev@gmail.com</p>
-        <div class="contacto-redes">
-            <a href="#" target="www.linkedin.com/in/
-            diana-laura-alvarez-m
-            ">💼 LinkedIn: https://www.linkedin.com/in/diana-laura-alvarez-m </a>
-            <a href="#" target="https://github.com/Dianalauraalavrezm_blank">🐙 GitHub : https://github.com/Dianalauraalavrezm</a>
+    <section id="contacto" class="container py-5 text-center" style="background-color: #e6cce6">
+        <h2 class="text-purple mb-4">Contacto</h2>
+      
+        <div class="row text-center">
+          <!-- Correo Electrónico -->
+          <div class="col-md-4 mb-3">
+            <div class="contact-card">
+              <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="contact-icon">
+              <h4>Correo Electrónico</h4>
+              <a href="mailto:diana.alvarezdev@gmail.com" class="contact-link email">
+                📧 diana.alvarezdev@gmail.com
+              </a>
+            </div>
+          </div>
+      
+          <!-- LinkedIn -->
+          <div class="col-md-4 mb-3">
+            <div class="contact-card">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="contact-icon">
+              <h4>Redes Sociales</h4>
+              <a href="https://www.linkedin.com/in/diana-laura-alvarez-m" class="contact-link linkedin">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="20" class="me-2">
+                LinkedIn
+              </a>
+            </div>
+          </div>
+      
+          <!-- GitHub -->
+          <div class="col-md-4 mb-3">
+            <div class="contact-card">
+              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="contact-icon">
+              <h4>Mi GitHub</h4>
+              <a href="https://github.com/Dianalauraalavrezm" class="contact-link github">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="20" class="me-2">
+                GitHub
+              </a>
+            </div>
+          </div>
         </div>
-    </section>
-
+      </section>
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Dianalauraalavrezm - Creado con 💜 y código</p>
-    </footer>
-
-</body>
-</html>
+<footer class="bg-dark text-white text-center py-4 w-100">
+    <div class="container">
+        <p class="mb-0">&copy; 2025 Diana laura Alvarez M. Todos los derechos reservados.</p>
+    
+    </div>
+</footer>

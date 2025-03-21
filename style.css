@@ -1,107 +1,285 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
+/* Estilos generales */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1b1b1b;
-    color: white;
-    text-align: center;
+  font-family: "Times New Roman", serif, "Arial", sans-serif; /* Se agrega Times New Roman como primera opción */
 }
 
-/* Header con avatar */
+.text-purple {
+  color: #6f42c1; /* Color púrpura Bootstrap */
+}
+
+/* Estilos del header */
 header {
-    background: linear-gradient(135deg, #bb7ef5, #ad70e2);
-    color: white;
-    padding: 40px 20px;
+  background: linear-gradient(135deg, #a370f7);
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.avatar img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid white;
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; /* Reduce el espacio debajo del avatar */
 }
 
-/* Navegación */
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: black;
+.avatar {
+  max-width: 300px; /* Aumenta el tamaño del avatar */
+  height: auto; /* Mantiene la proporción */
+  width: 100%; /* Para que se adapte sin perder calidad */
 }
 
-nav ul li {
-    margin: 15px;
+h1 {
+  font-size: 2.5rem;
+  margin-top: -10px; /* Reduce espacio superior */
 }
 
-nav a {
-    text-decoration: none;
-    color: #a855f7;
-    font-weight: bold;
-    transition: color 0.3s;
+p {
+  font-size: 1.4rem;
+  margin-top: -5px; /* Reduce espacio entre el título y el texto */
 }
 
-nav a:hover {
-    color: #f472b6;
+h1 {
+  font-size: 2.5rem; /* Aumenta el tamaño del nombre */
+  font-weight: bold;
+  margin-top: 10px; /* Reduce el espacio superior */
 }
 
-/* Secciones */
-section {
-    padding: 60px 20px;
-    background: #252525;
-    margin: 20px;
-    border-radius: 10px;
+p {
+  font-size: 1.5rem; /* Aumenta el tamaño del subtítulo */
+  font-weight: 500;
+  margin-top: -5px; /* Ajusta el espacio entre el h1 y el párrafo */
 }
 
-/* Proyectos */
+/* Barra de navegación */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección Sobre mí */
+#sobre-mi {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Sección Proyectos */
 .proyectos-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap; /* Permite que las cards se acomoden si no caben en una fila */
+  justify-content: center; /* Centra las cards */
+  gap: 20px; /* Espacio entre las cards */
 }
 
 .proyecto {
-    background: black;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(168, 85, 247, 0.4);
+  width: 45%; /* Ajuste para que quepan dos en una fila */
+  max-width: 500px; /* Evita que se vuelvan demasiado grandes */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(111, 66, 193, 0.5); /* Sombra morada */
+}
+
+.proyecto:hover {
+  transform: translateY(-5px);
 }
 
 .proyecto img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%; /* Imagen ocupa todo el ancho */
+  max-height: 250px; /* Controla el tamaño máximo */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.proyecto h3 {
+  margin-top: 15px;
+  font-size: 1.8rem;
+}
+
+.proyecto p {
+  text-align: justify; /* Justificar texto */
+  font-size: 1.1rem;
 }
 
 .proyecto-links a {
-    display: block;
-    color: #f472b6;
-    text-decoration: none;
-    margin-top: 5px;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  background: #6a0dad;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
 .proyecto-links a:hover {
-    color: #ba79f8;
+  background: #551a8b;
 }
 
-/* Contacto */
-.contacto-redes a {
-    display: inline-block;
-    margin: 10px;
-    color: #e64d9c;
-    text-decoration: none;
-}
-
-.contacto-redes a:hover {
-    color: #ca9cf6;
-}
-
-/* Responsive */
+/* Responsividad: Ajustar en pantallas pequeñas */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
+  .proyecto {
+    width: 100%; /* Ocupar todo el ancho en dispositivos móviles */
+  }
+}
+/* Estilos para la sección de Skills */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(111, 66, 193, 0.5); /* Sombra morada */
+}
+
+.skill:hover {
+  transform: scale(1.1);
+}
+
+.skill .skill-text {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.3s ease;
+  font-size: 1rem;
+  color: #333;
+}
+
+.skill:hover .skill-text {
+  opacity: 1;
+}
+
+.skill img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+/* Navbar - Dropdown Styles */
+.nav-item .nav-link:hover {
+  background-color: #5a4d9b;
+  border-radius: 5px;
+}
+/* Estilos generales */
+.contact-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-icon {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.contact-link:hover {
+  opacity: 0.8;
+}
+
+.email {
+  background: #ffdd57;
+  color: #000;
+  box-shadow: 0 4px 8px rgb(234, 207, 33); 
+}
+
+.linkedin {
+  background: #49befd;
+  color: #fff;
+  box-shadow: 0 4px 8px #01a5fd(80, 89, 224, 0.5); 
+}
+
+.github {
+  background: #8d9092;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+#proyectos {
+    margin-bottom: 60px; /* Espacio entre Proyectos y Contacto */
+  }
+  
+  #contacto {
+    margin-top: 60px; /* También puedes agregar aquí para mayor separación */
+  }
+  
+
+@media (min-width: 768px) {
+  .contacto-redes {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Footer */
+footer {
+  background: #343a40;
+  padding: 20px;
+  color: white;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .avatar img {
+    width: 100px;
+  }
+
+  .proyectos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .proyecto {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .avatar img {
+    width: 80px;
+  }
+
+  .proyecto {
+    width: 100%;
+  }
 }
