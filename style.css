@@ -5,36 +5,44 @@ body {
 
 /* Animación de escritura */
 .typing {
-  font-size: 36px;
-  font-weight: bold;
-  color: transparent;
-  background-image: linear-gradient(
-    to right,
-    #d8b8f4,
-    #ba72fa,
-    #7d00eb,
-    #220137
-  ); /* Degradado de lila a morado */
-  background-clip: text;
-  -webkit-background-clip: text;
-  text-fill-color: transparent;
-  overflow: hidden; /* Ocultar el texto que no se ha escrito aún */
-  white-space: nowrap; /* Evitar que el texto se rompa */
-  width: 0;
-  animation: typing 4s steps(20) forwards; /* Aquí definimos la animación */
-}
-
-/* Definición de la animación */
-@keyframes typing {
-  0% {
-    width: 0;
+    font-size: 36px;
+    font-weight: bold;
+    color: transparent;
+    background-image: linear-gradient(to right, #942fed, #7d00eb, #220137);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    font-family: monospace;
+    border-right: 4px solid;
+    animation: typing 8s steps(12) infinite, blink 0.5s infinite step-end alternate;
   }
-  100% {
-    width: 100%; /* Hacer que todo el texto se escriba */
+  
+  /* Animación de escritura, pausa y borrado */
+  @keyframes typing {
+    0% {
+      width: 0ch;
+    }
+    14.2% {
+      width: 26ch; /* Se escribe completamente en 1s */
+    }
+    85% {
+      width: 12ch; /* Permanece visible durante 5s */
+    }
+    100% {
+      width: 0ch; /* Se borra en 2s */
+    }
   }
-}
-
-
+  
+  /* Cursor parpadeante */
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
 .text-purple {
   color: #6f42c1; /* Color púrpura Bootstrap */
 }
