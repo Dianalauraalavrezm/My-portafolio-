@@ -5,44 +5,44 @@ body {
 
 /* Animación de escritura */
 .typing {
-    font-size: 36px;
-    font-weight: bold;
-    color: transparent;
-    background-image: linear-gradient(to right, #942fed, #7d00eb, #220137);
-    background-clip: text;
-    -webkit-background-clip: text;
-    text-fill-color: transparent;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    font-family: monospace;
-    border-right: 4px solid;
-    animation: typing 8s steps(12) infinite, blink 0.5s infinite step-end alternate;
+  font-size: 36px;
+  font-weight: bold;
+  color: transparent;
+  background-image: linear-gradient(to right, #942fed, #7d00eb, #220137);
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  font-family: monospace;
+  border-right: 4px solid;
+  animation: typing 8s steps(12) infinite,blink 0.5s infinite step-end alternate;
+}
+
+/* Animación de escritura, pausa y borrado */
+@keyframes typing {
+  0% {
+    width: 0ch;
   }
-  
-  /* Animación de escritura, pausa y borrado */
-  @keyframes typing {
-    0% {
-      width: 0ch;
-    }
-    14.2% {
-      width: 26ch; /* Se escribe completamente en 1s */
-    }
-    85% {
-      width: 12ch; /* Permanece visible durante 5s */
-    }
-    100% {
-      width: 0ch; /* Se borra en 2s */
-    }
+  14.2% {
+    width: 26ch; /* Se escribe completamente en 1s */
   }
-  
-  /* Cursor parpadeante */
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
+  85% {
+    width: 12ch; /* Permanece visible durante 5s */
   }
-  
+  100% {
+    width: 0ch; /* Se borra en 2s */
+  }
+}
+
+/* Cursor parpadeante */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 .text-purple {
   color: #6f42c1; /* Color púrpura Bootstrap */
 }
